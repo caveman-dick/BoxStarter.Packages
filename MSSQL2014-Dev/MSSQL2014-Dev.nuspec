@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>MSSQL2014-Dev</id>
+    <version>1.0.0.6</version>
+    <authors>mayesr</authors>
+    <owners>mayesr</owners>
+    <description>Package description</description>
+    <tags>Boxstarter</tags>
+	<dependencies>
+        <dependency id="imdisk" />
+    </dependencies>
+  </metadata>  
+</package>

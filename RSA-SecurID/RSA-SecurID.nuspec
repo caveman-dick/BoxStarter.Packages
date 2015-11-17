@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>RSA-SecurID</id>
+    <version>5.0.0.2</version>
+    <authors>mayesr</authors>
+    <owners>mayesr</owners>
+    <description>Chocolatey Package to install the RSA SecurID Software Token</description>
+    <tags>Boxstarter</tags>
+  </metadata>
+</package>

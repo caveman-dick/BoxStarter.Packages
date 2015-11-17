@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>DevMachineSetup</id>
+    <version>1.0.4</version>
+    <authors>mayesr</authors>
+    <owners>mayesr</owners>
+    <description>Boxstarter package to setup my development machine.</description>
+    <tags>Boxstarter</tags>
+  </metadata>
+</package>

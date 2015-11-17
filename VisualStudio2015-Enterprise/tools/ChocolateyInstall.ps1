@@ -1,0 +1,1 @@
+Install-ChocolateyPackage 'VisualStudio2015-Enterprise' 'exe' '/Passive' 'https://go.microsoft.com/fwlink/?LinkId=615437&clcid=0x409'
