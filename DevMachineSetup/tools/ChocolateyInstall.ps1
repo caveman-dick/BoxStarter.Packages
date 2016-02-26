@@ -89,9 +89,6 @@ try
     cinst -y sysinternals
     cinst -y windbg
     (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
-    
-    #Windows installer
-    cinst -y insted 
 
     Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
     
