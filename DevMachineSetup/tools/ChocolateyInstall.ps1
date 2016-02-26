@@ -74,8 +74,11 @@ try
     cinst -y nugetpackageexplorer
     cinst -y dotPeek
     cinst -y ilspy
-    cinst -y fiddler4   
+    cinst -y fiddler4
+    
+    #DevTools - MSI Tools and Frameworks
     cinst -y insted
+    cinst -y wixtoolset
     
     # Virtualisation        
     cinst -y virtualbox
