@@ -69,7 +69,8 @@ try
     Install-ChocolateyVsixPackage 'ProductivityPowerTools' 'https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d/file/169971/1/ProPowerTools.vsix'
     Install-ChocolateyVsixPackage 'ConEmuLauncher' 'https://visualstudiogallery.msdn.microsoft.com/1ce30e82-c27c-40fd-b2d8-310ab234ab74/file/91435/6/ConEmuLauncher.vsix'    
     Install-ChocolateyVsixPackage 'GitHubExtensionVisualStudio' 'https://visualstudiogallery.msdn.microsoft.com/75be44fb-0794-4391-8865-c3279527e97d/file/159055/11/GitHub.VisualStudio.vsix'    
-    Install-ChocolateyVsixPackage 'ConEmuLauncher' 'https://visualstudiogallery.msdn.microsoft.com/1ce30e82-c27c-40fd-b2d8-310ab234ab74/file/91435/6/ConEmuLauncher.vsix'    
+    Install-ChocolateyVsixPackage 'ConEmuLauncher' 'https://visualstudiogallery.msdn.microsoft.com/1ce30e82-c27c-40fd-b2d8-310ab234ab74/file/91435/6/ConEmuLauncher.vsix'
+    Install-ChocolateyVsixPackage 'PowershellTools' 'https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597/file/199313/1/PowerShellTools.14.0.vsix'    
         
     #DevTools - Misc
     cinst -y nugetpackageexplorer
