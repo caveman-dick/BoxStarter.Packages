@@ -29,6 +29,7 @@ try
     cinst -y cmder -pre
     cinst -y grepwin
     cinst -y RSA-SecurID
+    cinst -y hipchat
 
     #Browsers
     cinst -y firefox
