@@ -9,15 +9,6 @@ Here is a link to all the docs for BoxStarter:  http://boxstarter.org/WhyBoxstar
 
 The following summarises what I did.
 
-Turn off Windows Logon Warning message
----------------------------------------
-This needs to be turned off if you leave the machine unattended otherwise it will wait for you to acknowldege each time.
-
-Open up regedit.exe and delete Text entries in the following registry entries under "LegalNoticeCaption" and "LegalNoticeText" which can be found here:
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system
-
-ref: http://www.howtogeek.com/howto/windows/disable-that-annoying-windows-logon-warning-message/
-
 Install BoxStarter
 -------------------
 http://boxstarter.org/InstallBoxstarter
@@ -30,20 +21,29 @@ It can be found here: http://git.dev.ahc/mayesr/Boxstarter.Packages
 
 Edit the ChocolatelyInstall.ps1 to suit your needs (found under DevMachineSetup/tools)
 
-Create Your BoxStarter Packages
+Creating BoxStarter Packages
 -------------------------------
 Open the BoxStarter command prompt (To access the BoxStarter shell type "BoxStarterShell" at an admin PowerShell command prompt (note BoxStarterShell NOT BoxStarter))
 
 Run the following command:
 
-New-BoxstarterPackage -Name DevMachineSetup -Description "DevMachineSetup" -Path "c:\somePath" where somePath contains the ChocolatelyInstall.ps1 file.
+```New-BoxstarterPackage -Name DevMachineSetup -Description "DevMachineSetup" -Path "c:\somePath"``` 
 
-Do the same for the MSSQL2014-Dev, TFPT2015 and VisualStudio2015-Enterprise (RSA-SecureID not working so install manually).
+where somePath contains the ChocolatelyInstall.ps1 file.
 
 Install a boxstarter package to your local BoxStarter repository
 -----------------------------------------------------------------
-Call the Invoke-BoxStarterBuild MyPackage command to generate the *.nupkg file for DevMachineSetup, MSSQL2014-Dev...etc. Boxstarter saves these files in the root of $Boxstarter.LocalRepo
-e.g. Invoke-BoxStarterBuild DevMachineSetup
+
+To build the packages to *.nupkg files and install into $Boxstarter.LocalRepo call:
+```Invoke-BoxStarterBuild MyPackage```
+
+For the following packages and anything else you have manually created in the step above:
+* DevMachineSetup
+* MSSQL2014-Dev
+* TFPT2015
+* VisualStudio2015-Enterprise 
+* ~~RSA-SecurID~~ (not currently working so install manually).
+
 
 Run the Package to install
 ---------------------------
