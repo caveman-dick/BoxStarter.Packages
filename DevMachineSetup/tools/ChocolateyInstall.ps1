@@ -34,7 +34,7 @@ try
     cinst -y greenshot
     cinst -y cmder
     cinst -y grepwin
-    cinst -y RSA-SecurID
+    cinst -y RSA-SecurID --ignorechecksums
 
     #Messaging apps
     cinst -y slack
@@ -70,9 +70,9 @@ try
     # DevTools - IDE's    
     cinst -y linqpad4
     cinst -y linqpad5
-    cinst -y mssql2014-dev
-    cinst -y VisualStudio2015-Enterprise
-    cinst -y tfpt2015
+    cinst -y mssql2014-dev --ignorechecksums
+    cinst -y VisualStudio2015-Enterprise --ignorechecksums
+    cinst -y tfpt2015 --ignorechecksums
 
     if (Test-PendingReboot) { Invoke-Reboot }
     
