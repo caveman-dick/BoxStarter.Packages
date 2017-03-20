@@ -1,1 +1,0 @@
-Install-ChocolateyPackage 'TFPT2015' 'msi' '/quiet' 'https://visualstudiogallery.msdn.microsoft.com/898a828a-af00-42c6-bbb2-530dc7b8f2e1/file/177107/1/tfpt.msi'    

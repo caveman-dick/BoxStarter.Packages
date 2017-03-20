@@ -72,7 +72,7 @@ try
     cinst -y linqpad5
     cinst -y mssql2014-dev --ignorechecksums
     cinst -y VisualStudio2015-Enterprise --ignorechecksums
-    cinst -y tfpt2015 --ignorechecksums
+    cinst -y tfpt
 
     if (Test-PendingReboot) { Invoke-Reboot }
     
@@ -100,7 +100,6 @@ try
     Enable-WindowsOptionalFeature -online -FeatureName Containers
     Enable-WindowsOptionalFeature -online -FeatureName Microsoft-Hyper-V-All
     cinst -y vagrant
-    
     
     # SystemTools  
     cinst -y sysinternals
