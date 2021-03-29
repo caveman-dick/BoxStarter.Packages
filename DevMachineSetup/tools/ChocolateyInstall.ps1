@@ -81,7 +81,7 @@ try
     choco install docker-desktop
 
     # IIS
-    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName IIS-ASPNET45
+    Enable-WindowsOptionalFeature -Online -All -NoRestart -FeatureName IIS-ASPNET45
     
     # SystemTools  
     choco install sysinternals
