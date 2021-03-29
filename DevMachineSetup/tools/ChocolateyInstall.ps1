@@ -68,7 +68,6 @@ try
     # DevTools - IDE's    
     cinst -y linqpad4
     cinst -y linqpad5
-    cinst -y mssql2014-dev --ignorechecksums
     cinst -y tfpt
 
     if (Test-PendingReboot) { Invoke-Reboot }
