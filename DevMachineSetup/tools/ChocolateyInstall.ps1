@@ -34,10 +34,6 @@ try
     choco install greenshot
     choco install grepwin
 
-    #Messaging apps
-    cinst -y slack
-    cinst -y skype
-
     # Text Editors
     cinst -y atom
     cinst -y notepadplusplus
