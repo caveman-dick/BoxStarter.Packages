@@ -10,7 +10,7 @@ try
     # Basic setup
     Update-ExecutionPolicy Unrestricted    
     Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
-    Set-BoxstarterTaskbarOptions -Size Large -Dock Top -Combine Never -AlwayShowIconsOn -MultiMonitorMode All -MultiMonitorCombine Always
+    Set-BoxstarterTaskbarOptions -Size Large -Dock Top -Combine Never -AlwaysShowIconsOn -MultiMonitorMode All -MultiMonitorCombine Always
     Disable-InternetExplorerESC
     Disable-GameBarTips
     Enable-RemoteDesktop
