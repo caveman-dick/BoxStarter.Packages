@@ -1,1 +1,0 @@
-Install-ChocolateyPackage 'VisualStudio2015-Enterprise' 'exe' '/Passive' 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=48143&6B49FDFB-8E5B-4B07-BC31-15695C5A2143=1'

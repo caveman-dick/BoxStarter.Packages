@@ -32,9 +32,7 @@ try
     choco install windirstat
     choco install baretail
     choco install greenshot
-    choco install cmder
     choco install grepwin
-    choco install RSA-SecurID --ignorechecksums
 
     #Messaging apps
     cinst -y slack
