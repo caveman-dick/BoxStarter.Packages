@@ -9,7 +9,7 @@ try
 
     # Basic setup
     Update-ExecutionPolicy Unrestricted    
-    Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+    Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder -EnableShowRibbon
     Set-BoxstarterTaskbarOptions -Size Large -Dock Top -Combine Never -AlwaysShowIconsOn -MultiMonitorMode All -MultiMonitorCombine Always
     Disable-InternetExplorerESC
     Disable-GameBarTips
@@ -87,6 +87,5 @@ try
 } 
 catch 
 {
-    Write-ChocolateyFailure 'Dev-Machine-Setup' $($_.Exception.Message)
-    throw
+    throw $_.Exception
 }
