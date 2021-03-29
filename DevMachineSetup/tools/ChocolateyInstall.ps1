@@ -10,8 +10,16 @@ try
     # Basic setup
     Update-ExecutionPolicy Unrestricted    
     Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
-    Set-TaskbarSmall
+    Set-BoxstarterTaskbarOptions -Size Large -Dock Top -Combine Never -AlwayShowIconsOn -MultiMonitorMode All -MultiMonitorCombine Always
+    Disable-InternetExplorerESC
+    Disable-GameBarTips
     Enable-RemoteDesktop
+
+    # Language setup
+    $LanguageList = Get-WinUserLanguageList;
+    $LanguageList.Add("en-GB");
+    $LanguageList.Add("en-US");
+    Set-WinUserLanguageList $LanguageList
 
     if (Test-PendingReboot) { Invoke-Reboot }
 
@@ -20,7 +28,7 @@ try
     if (Test-PendingReboot) { Invoke-Reboot }       
 
     # Essential Tools
-    choco install zip    
+    choco install 7zip    
     choco install conemu
     choco install windirstat
     choco install baretail
