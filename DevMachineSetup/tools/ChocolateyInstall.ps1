@@ -10,7 +10,7 @@ try
     # Basic setup
     Update-ExecutionPolicy Unrestricted    
     Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder -EnableShowRibbon
-    Set-BoxstarterTaskbarOptions -Size Large -Dock Top -Combine Never -AlwaysShowIconsOn -MultiMonitorMode All -MultiMonitorCombine Always
+    Set-BoxstarterTaskbarOptions -Size Large -Dock Bottom -AlwaysShowIconsOn
     Disable-InternetExplorerESC
     Disable-GameBarTips
     Enable-RemoteDesktop
@@ -46,6 +46,7 @@ try
     choco install opera
     
     # DevTools - Frameworks
+    choco install dotnet
     choco install dotnet4.6    
     choco install nodejs
 
@@ -64,17 +65,23 @@ try
 
     if (Test-PendingReboot) { Invoke-Reboot }
     
-    # DevTool - VS Extensions
-    Install-ChocolateyVsixPackage 'VsVim' 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/JaredParMSFT/vsextensions/VsVim/2.8.0.0/vspackage'
-        
     # DevTools - Misc
     choco install nugetpackageexplorer
     choco install fiddler
     
     # Virtualisation              
-    Enable-WindowsOptionalFeature -online -FeatureName Containers
-    Enable-WindowsOptionalFeature -online -FeatureName Microsoft-Hyper-V-All
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Containers
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Hyper-V-All
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName VirtualMachinePlatform
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
+    if (Test-PendingReboot) { Invoke-Reboot }
+    choco install wsl-ubuntu-2004
+    wsl --set-default-version 2
     choco install vagrant
+    choco install docker-desktop
+
+    # IIS
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName IIS-ASPNET45
     
     # SystemTools  
     choco install sysinternals
