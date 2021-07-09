@@ -29,11 +29,20 @@ try
 
     # Essential Tools
     choco install 7zip    
-    choco install conemu
     choco install windirstat
     choco install baretail
     choco install greenshot
     choco install grepwin
+    choco install terminals
+    choco install scrcpy
+    choco install hostsman
+
+    # CLI setup
+    choco install powershell-core
+    choco install conemu
+    Install-Module posh-git -Scope CurrentUser
+    Install-Module oh-my-posh -Scope CurrentUser
+    Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
     # Text Editors
     choco install vscode
@@ -46,8 +55,10 @@ try
     choco install opera
     
     # DevTools - Frameworks
-    choco install dotnet
-    choco install dotnet4.6    
+    choco install dotnet #.
+    choco install dotnet4.6
+    choco install windows-sdk-10
+    choco install netfx-4.6-devpack
     choco install nodejs
 
     if (Test-PendingReboot) { Invoke-Reboot }
@@ -68,6 +79,7 @@ try
     # DevTools - Misc
     choco install nugetpackageexplorer
     choco install fiddler
+    choco install awscli
     
     # Virtualisation              
     Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Containers
@@ -82,12 +94,9 @@ try
 
     # IIS
     Enable-WindowsOptionalFeature -Online -All -NoRestart -FeatureName IIS-ASPNET45
-    
-    # SystemTools  
-    choco install sysinternals
-    choco install windbg
-    (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
 
+    choco install urlrewrite
+    
     mkdir C:\source        
 
     Write-ChocolateySuccess 'Dev-Machine-Setup'
