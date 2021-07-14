@@ -15,6 +15,7 @@ try
     Disable-GameBarTips
     Enable-RemoteDesktop
 
+
     # Language setup
     $LanguageList = Get-WinUserLanguageList;
     $LanguageList.Add("en-GB");
@@ -68,9 +69,10 @@ try
     # DevTools - Frameworks
     choco install dotnet #.
     choco install dotnet4.6
+    choco install dotnet4.6.1
     choco install windows-sdk-10
     choco install netfx-4.6-devpack
-    choco install nodejs
+    choco install netfx-4.6.1-devpack
 
     if (Test-PendingReboot) { Invoke-Reboot }
 
