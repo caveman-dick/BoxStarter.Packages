@@ -37,11 +37,22 @@ try
     choco install scrcpy
     choco install hostsman
 
-    # CLI setup
+    # Setup Scoop
+    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+    scoop bucket add nerd-fonts
+
+    scoop install sudo
+    scoop install nvm
+    sudo scoop install DejaVuSansMono-NF
+
+    # CLI Setup
+    [environment]::setEnvironmentVariable('PSModulePath',"$env:OneDrive\Documents\WindowsPowerShell\Modules",'User')
+    refreshenv
     choco install powershell-core
     choco install conemu
-    Install-Module posh-git -Scope CurrentUser
-    Install-Module oh-my-posh -Scope CurrentUser
+    Install-Module posh-git -Scope CurrentUser -Force
+    Install-Module oh-my-posh -Scope CurrentUser -Force
+    Install-Module z -Scope CurrentUser -Force
     Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
     # Text Editors
