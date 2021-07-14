@@ -46,6 +46,10 @@ try
     scoop install nvm
     sudo scoop install DejaVuSansMono-NF
 
+    # Install nodejs
+    nvm install latest
+    nvm use latest
+
     # CLI Setup
     [environment]::setEnvironmentVariable('PSModulePath',"$env:OneDrive\Documents\WindowsPowerShell\Modules",'User')
     refreshenv
