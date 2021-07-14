@@ -97,6 +97,7 @@ try
     choco install nugetpackageexplorer
     choco install fiddler
     choco install awscli
+    iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
 
     # Virtualisation
     Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Containers
