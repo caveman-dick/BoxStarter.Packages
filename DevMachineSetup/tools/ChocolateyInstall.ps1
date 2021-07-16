@@ -15,6 +15,21 @@ try
     Disable-GameBarTips
     Enable-RemoteDesktop
 
+    # Virtualisation
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Containers
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Hyper-V-All
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName VirtualMachinePlatform
+    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
+    if (Test-PendingReboot) { Invoke-Reboot }
+    choco install wsl-ubuntu-2004
+    wsl --set-default-version 2
+    choco install vagrant
+    choco install docker-desktop
+
+    # IIS
+    Enable-WindowsOptionalFeature -Online -All -NoRestart -FeatureName IIS-ASPNET45
+
+    choco install urlrewrite
 
     # Language setup
     $LanguageList = Get-WinUserLanguageList;
@@ -99,21 +114,7 @@ try
     choco install awscli
     iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
 
-    # Virtualisation
-    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Containers
-    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Hyper-V-All
-    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName VirtualMachinePlatform
-    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
-    if (Test-PendingReboot) { Invoke-Reboot }
-    choco install wsl-ubuntu-2004
-    wsl --set-default-version 2
-    choco install vagrant
-    choco install docker-desktop
 
-    # IIS
-    Enable-WindowsOptionalFeature -Online -All -NoRestart -FeatureName IIS-ASPNET45
-
-    choco install urlrewrite
 
     mkdir C:\source
 
