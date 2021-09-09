@@ -8,9 +8,9 @@ Here is a link to all the docs for BoxStarter: [Why BoxStarter](http://boxstarte
 
 The following summarises what I did.
 
-### Install BoxStarter
+### Setup
 
-Here is a link to install BoxStarter: [Install BoxStarter](http://boxstarter.org/InstallBoxstarter)
+You can either run the `1.Setup.ps1` script as admin or manually install BoxStarter: [Install BoxStarter](http://boxstarter.org/InstallBoxstarter)
 
 ### Checkout Existing BoxStarter Script
 
@@ -20,27 +20,8 @@ Edit the ChocolatelyInstall.ps1 to suit your needs (found under DevMachineSetup/
 
 ### Creating BoxStarter Packages
 
-Open the BoxStarter command prompt (To access the BoxStarter shell type "BoxStarterShell" at an admin PowerShell command prompt (note BoxStarterShell NOT BoxStarter))
+Run the `2.BuildPackages.ps1` to build the package
 
-Run the following command:
+### Install the boxstarter package
 
-```New-BoxstarterPackage -Name DevMachineSetup -Description "DevMachineSetup" -Path "c:\somePath"```
-
-where somePath contains the ChocolatelyInstall.ps1 file.
-
-### Install a boxstarter package to your local BoxStarter repository
-
-To build the packages to *.nupkg files and install into $Boxstarter.LocalRepo call:
-```Invoke-BoxStarterBuild MyPackage```
-
-For the following packages and anything else you have manually created in the step above:
-
-* DevMachineSetup
-* MSSQL2014-Dev
-* TFPT2015
-* VisualStudio2015-Enterprise 
-* ~~RSA-SecurID~~ (not currently working so install manually).
-
-### Run the Package to install
-
-```Install-BoxstarterPackage -PackageName DevMachineSetup```
+Installing the package will also run all the commands in your `ChocolateyInstall.ps1` so this will take a while. Run the `3.Install.ps1` to kick it all off.
