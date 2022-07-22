@@ -30,8 +30,6 @@ try
 
     choco install urlrewrite
 
-    Install-WindowsUpdate -AcceptEula
-
     if (Test-PendingReboot) { Invoke-Reboot }
 
     # Essential Tools
