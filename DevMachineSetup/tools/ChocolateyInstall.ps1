@@ -43,7 +43,7 @@ try
     choco install hostsman
     choco install grepwin
     choco install microsoft-windows-terminal
-    choco install terminal-icons.powershell
+    choco install terminal-icons.powershell --package-parameters="/core /desktop"
     choco install terminals
     choco install scrcpy
 
