@@ -21,8 +21,8 @@ try
     Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName VirtualMachinePlatform
     Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName Microsoft-Windows-Subsystem-Linux
     if (Test-PendingReboot) { Invoke-Reboot }
-    choco install wsl-ubuntu-2204
     wsl --set-default-version 2
+    choco install wsl-ubuntu-2204
     choco install vagrant
 
     # IIS
