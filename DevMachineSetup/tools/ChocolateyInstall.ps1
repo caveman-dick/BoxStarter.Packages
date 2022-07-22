@@ -40,10 +40,11 @@ try
     choco install windirstat
     choco install baretail
     choco install greenshot
+    choco install hostsman
     choco install grepwin
+    choco install microsoft-windows-terminal
     choco install terminals
     choco install scrcpy
-    choco install hostsman
 
     # Setup Scoop
     Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
