@@ -104,11 +104,10 @@ try
 
     # DevTools - Misc
     choco install nugetpackageexplorer
+    choco install devtoys
     choco install fiddler
     choco install awscli
     iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
-
-
 
     mkdir C:\source
 
