@@ -79,7 +79,8 @@ try
 
     # DevTools - Frameworks
     choco install dotnet-5.0-sdk
-    choco install dotnet #.
+    choco install dotnet # 6.0
+    choco install dotnet-sdk # 6.0-sdk
     choco install dotnet4.6
     choco install dotnet4.6.1
     choco install windows-sdk-10
