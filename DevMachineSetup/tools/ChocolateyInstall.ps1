@@ -24,7 +24,6 @@ try
     choco install wsl-ubuntu-2204
     wsl --set-default-version 2
     choco install vagrant
-    choco install docker-desktop
 
     # IIS
     Enable-WindowsOptionalFeature -Online -All -NoRestart -FeatureName IIS-ASPNET45
