@@ -63,7 +63,6 @@ try
     [environment]::setEnvironmentVariable('PSModulePath',"$env:OneDrive\Documents\WindowsPowerShell\Modules",'User')
     refreshenv
     choco install powershell-core
-    choco install conemu
     Install-Module posh-git -Scope CurrentUser -Force
     Install-Module oh-my-posh -Scope CurrentUser -Force
     Install-Module z -Scope CurrentUser -Force
