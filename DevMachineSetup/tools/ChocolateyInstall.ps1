@@ -31,14 +31,6 @@ try
 
     choco install urlrewrite
 
-    # Language setup
-    $LanguageList = Get-WinUserLanguageList;
-    $LanguageList.Add("en-GB");
-    $LanguageList.Add("en-US");
-    Set-WinUserLanguageList $LanguageList
-
-    if (Test-PendingReboot) { Invoke-Reboot }
-
     Install-WindowsUpdate -AcceptEula
 
     if (Test-PendingReboot) { Invoke-Reboot }
