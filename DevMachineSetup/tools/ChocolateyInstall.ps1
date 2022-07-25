@@ -45,18 +45,18 @@ try
     choco install scrcpy
 
     # Setup Scoop
-    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-    scoop bucket add nerd-fonts
-
-    scoop install sudo
-    scoop install nvm
-    sudo scoop install DejaVuSansMono-NF
+    if (!(Test-Path -Path '~/scoop')) {
+        Invoke-Expression "& {$(Invoke-RestMethod get.scoop.sh)} -RunAsAdmin"
+    }
 
     # Install nodejs
+    choco install nvm
     nvm install latest
     nvm use latest
 
     # CLI Setup
+    choco install sudo
+    choco install font-nerd-dejavusansmono
     [environment]::setEnvironmentVariable('PSModulePath',"$env:OneDrive\Documents\WindowsPowerShell\Modules",'User')
     refreshenv
     choco install powershell-core
