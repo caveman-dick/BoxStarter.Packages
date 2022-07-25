@@ -107,7 +107,9 @@ try
     choco install awscli
     iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) } -AddNetfx"
 
-    mkdir C:\source
+    if (!(Test-Path -Path 'C:\source')) {
+        mkdir C:\source
+    }
 
     Write-ChocolateySuccess 'Dev-Machine-Setup'
 }
