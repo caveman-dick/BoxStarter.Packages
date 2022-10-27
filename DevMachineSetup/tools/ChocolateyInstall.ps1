@@ -55,13 +55,12 @@ try
     nvm use latest
 
     # CLI Setup
+    choco install oh-my-posh
     choco install sudo
     choco install font-nerd-dejavusansmono
     [environment]::setEnvironmentVariable('PSModulePath',"$env:OneDrive\Documents\WindowsPowerShell\Modules",'User')
     refreshenv
     choco install powershell-core
-    Install-Module posh-git -Scope CurrentUser -Force
-    Install-Module oh-my-posh -Scope CurrentUser -Force
     Install-Module z -Scope CurrentUser -Force
     Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
